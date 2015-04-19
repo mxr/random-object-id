@@ -22,6 +22,6 @@ if __name__ == '__main__':
     object_id = gen_random_object_id()
 
     if options.long_form:
-        print 'ObjectId({})'.format(object_id)
+        print 'ObjectId("{}")'.format(object_id)
     else:
         print object_id
