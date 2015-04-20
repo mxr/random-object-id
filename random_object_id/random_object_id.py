@@ -2,7 +2,7 @@ import binascii
 import os
 import time
 
-from optparse import OptionParser
+from argparse import ArgumentParser
 
 
 def gen_random_object_id():
@@ -11,17 +11,17 @@ def gen_random_object_id():
     return timestamp + rest
 
 if __name__ == '__main__':
-    parser = OptionParser()
-    parser.add_option('-l', '--longform',
-                      action="store_true",
-                      dest="long_form",
-                      help="prints the ID surrounded by ObjectId(...)")
+    parser = ArgumentParser(description='Generate a random MongoDB ObjectId')
+    parser.add_argument('-l', '--longform',
+                        action="store_true",
+                        dest="long_form",
+                        help="prints the ID surrounded by ObjectId(...)")
 
-    (options, args) = parser.parse_args()
+    args = parser.parse_args()
 
     object_id = gen_random_object_id()
 
-    if options.long_form:
+    if args.long_form:
         print('ObjectId("{}")'.format(object_id))
     else:
         print(object_id)
