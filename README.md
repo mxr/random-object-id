@@ -7,7 +7,7 @@ This is a pretty simple project without any outlandish goals. Occasionally I nee
 None.
 
 ## Supports
-Python 2 and 3. See the Travis button above for full breakdown.
+Python 2 and 3. See the Travis button above for the full breakdown.
 
 ## Usage
 ```
