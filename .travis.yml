@@ -7,5 +7,5 @@ python:
   - "3.4"
 install:
   - pip install -r dev_requirements.txt
-before_script: flake8 random-object-id/ tests/
+before_script: flake8 random_object_id/ tests/
 script: py.test tests/
