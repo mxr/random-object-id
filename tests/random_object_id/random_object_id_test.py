@@ -3,7 +3,7 @@ import re
 import sys
 
 import mock
-from six.moves import cStringIO
+import six
 
 from random_object_id.random_object_id import \
     gen_random_object_id, parse_args, main
@@ -11,10 +11,9 @@ from random_object_id.random_object_id import \
 
 @contextlib.contextmanager
 def captured_output():
-    new_out = StringIO()
     old_out = sys.stdout
     try:
-        sys.stdout = new_out
+        sys.stdout = six.StringIO()
         yield sys.stdout
     finally:
         sys.stdout = old_out
