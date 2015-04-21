@@ -1,28 +1,26 @@
+import contextlib
 import re
 import sys
 
-from contextlib import contextmanager
-
-try:
-    from StringIO import StringIO
-except ImportError:
-    from io import StringIO
-
 import mock
+import six
 
 from random_object_id.random_object_id import \
     gen_random_object_id, parse_args, main
 
 
-@contextmanager
+@contextlib.contextmanager
 def captured_output():
-    new_out = StringIO()
     old_out = sys.stdout
     try:
-        sys.stdout = new_out
+        sys.stdout = six.StringIO()
         yield sys.stdout
     finally:
         sys.stdout = old_out
+
+
+def test_gen_random_object_id():
+    assert re.match('[0-9a-f]{24}', gen_random_object_id())
 
 
 def test_gen_random_object_id_time():
@@ -31,10 +29,6 @@ def test_gen_random_object_id_time():
         object_id = gen_random_object_id()
 
     assert re.match('55348a19', object_id)
-
-
-def test_gen_random_object_id_length():
-    assert len(gen_random_object_id()) == 24
 
 
 def test_parse_args():
