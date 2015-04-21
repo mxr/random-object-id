@@ -4,6 +4,7 @@ python:
   - "3.2"
   - "3.3"
   - "3.4"
+  - "nightly"
 install:
   - pip install -r dev_requirements.txt
 before_script: flake8 random_object_id/ tests/
