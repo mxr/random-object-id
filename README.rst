@@ -14,7 +14,7 @@ None.
 Supports
 --------
 
-Python 2.7 and 3.2+. See ```.travis.yml```_ for the full breakdown.
+Python 2.7 and 3.2+. See ``.travis.yml`` here_ for the full breakdown.
 
 Installation
 ------------
@@ -49,4 +49,4 @@ Examples
 
 .. |Build Status| image:: https://travis-ci.org/mxr/random-object-id.svg?branch=master
    :target: https://travis-ci.org/mxr/random-object-id
-.. _``.travis.yml``: https://github.com/mxr/random-object-id/blob/master/.travis.yml
+.. _here: https://github.com/mxr/random-object-id/blob/master/.travis.yml
