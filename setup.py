@@ -1,11 +1,16 @@
 import re
+import os
 
 from setuptools import setup
 
-init_contents = open('random_object_id/__init__.py').read()
-version = re.search('"([0-9\.]+)"', init_contents).group(1)
 
-long_description = open('README.md').read()
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
+init_path = 'random_object_id/__init__.py'
+version = re.search('"([0-9\.]+)"', read(init_path)).group(1)
+
+long_description = read('README.rst')
 
 setup(
     name='random-object-id',
@@ -20,5 +25,7 @@ setup(
     long_description=long_description,
     author='Max Rozentsveyg',
     author_email='maxr@outlook.com',
+    license='MIT',
+    keywords='random test MongoDB mongo ObjectId',
     url='https://github.com/mxr/random-object-id',
 )
