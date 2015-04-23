@@ -5,7 +5,8 @@ from setuptools import setup
 init_contents = open('random_object_id/__init__.py').read()
 version = re.search('"([0-9\.]+)"', init_contents).group(1)
 
-long_description = open('README.md').read()
+with open('README.rst', 'rb') as f:
+    long_description = f.read().decode('utf-8')
 
 setup(
     name='random-object-id',
