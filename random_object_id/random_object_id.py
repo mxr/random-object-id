@@ -30,6 +30,3 @@ def main():
         print('ObjectId("{}")'.format(object_id))
     else:
         print(object_id)
-
-if __name__ == '__main__':
-    main()
