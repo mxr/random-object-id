@@ -16,6 +16,13 @@ Supports
 
 Python 2.7 and 3.2+. See the Travis button above for the full breakdown.
 
+Installation
+____________
+
+::
+
+    pip install random-object-id
+
 Usage
 -----
 
@@ -36,11 +43,6 @@ Examples
     55348611a56c10449ab80a4f
     $ python random-object-id/random-object-id.py -l
     ObjectId("553486125ed592a10c4e8e6b")
-
-Coming soon
------------
-
-You’ll be able to install this from pip
 
 .. |Build Status| image:: https://travis-ci.org/mxr/random-object-id.svg?branch=master
    :target: https://travis-ci.org/mxr/random-object-id
