@@ -17,7 +17,7 @@ def parse_args(args):
     parser.add_argument('-l', '--longform',
                         action="store_true",
                         dest="long_form",
-                        help="prints the ID surrounded by ObjectId(...)")
+                        help='prints the ID surrounded by ObjectId("...")')
 
     return parser.parse_args(args)
 
