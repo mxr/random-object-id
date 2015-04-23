@@ -25,5 +25,7 @@ setup(
     long_description=long_description,
     author='Max Rozentsveyg',
     author_email='maxr@outlook.com',
+    license='MIT',
+    keywords='random test MongoDB mongo ObjectId',
     url='https://github.com/mxr/random-object-id',
 )
