@@ -1,12 +1,16 @@
 import re
+import os
 
 from setuptools import setup
 
-init_contents = open('random_object_id/__init__.py').read()
-version = re.search('"([0-9\.]+)"', init_contents).group(1)
 
-with open('README.rst', 'rb') as f:
-    long_description = f.read().decode('utf-8')
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
+init_path = 'random_object_id/__init__.py'
+version = re.search('"([0-9\.]+)"', read(init_path)).group(1)
+
+long_description = read('README.rst')
 
 setup(
     name='random-object-id',
