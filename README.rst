@@ -1,5 +1,5 @@
-Random ObjectId |Build Status|
-==============================
+Random ObjectId |Build Status| |Wheel Badge|
+============================================
 
 Motivation
 ----------
@@ -49,4 +49,7 @@ Examples
 
 .. |Build Status| image:: https://travis-ci.org/mxr/random-object-id.svg?branch=master
    :target: https://travis-ci.org/mxr/random-object-id
+.. |Wheel Badge| image:: https://pypip.in/wheel/random-object-id/badge.svg
+   :target: https://pypi.python.org/pypi/random-object-id/
+   :alt: Wheel Status
 .. _here: https://github.com/mxr/random-object-id/blob/master/.travis.yml
