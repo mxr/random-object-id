@@ -9,7 +9,7 @@ This is a pretty simple project without any outlandish goals. Occasionally I nee
 Dependencies
 ------------
 
-None. The `dev_requirements.txt` file is used for dependencies needed to contribute to the project.
+None. The ``dev_requirements.txt`` file is used for dependencies needed to contribute to the project.
 
 Supports
 --------
