@@ -47,9 +47,9 @@ Examples
     $ random_object_id -l
     ObjectId("553486125ed592a10c4e8e6b")
 
-.. |Build Status| image:: https://travis-ci.org/mxr/random-object-id.svg?branch=master
+.. |Build Status| image:: https://img.shields.io/travis/mxr/random-object-id.svg?maxAge=2592000
    :target: https://travis-ci.org/mxr/random-object-id
-.. |Wheel Badge| image:: https://pypip.in/wheel/random-object-id/badge.svg
+.. |Wheel Badge| image:: https://img.shields.io/pypi/wheel/random-object-id.svg?maxAge=2592000
    :target: https://pypi.python.org/pypi/random-object-id/
    :alt: Wheel Status
 .. _here: https://github.com/mxr/random-object-id/blob/master/.travis.yml
