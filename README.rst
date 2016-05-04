@@ -4,7 +4,7 @@ Random ObjectId |Build Status| |Wheel Badge|
 Motivation
 ----------
 
-This is a pretty simple project without any outlandish goals. Occasionally I needed a MongoDB ObjectID for a unit test. This saves a DB query, starting `mongo` locally, or visiting a website. I also wanted to learn more about writing & deploying Python packages.
+This is a pretty simple project without any outlandish goals. Occasionally I needed a MongoDB ObjectID for a unit test. This saves a DB query, starting ``mongo`` locally, or visiting a website. I also wanted to learn more about writing & deploying Python packages.
 
 Dependencies
 ------------
