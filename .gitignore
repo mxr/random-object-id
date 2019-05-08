@@ -3,3 +3,4 @@ build/
 dist/
 random_object_id.egg-info/
 venv/
+.vscode/
