@@ -1,5 +1,11 @@
+*.egg-info
 *.pyc
-build/
-dist/
-random_object_id.egg-info/
-venv/
+/.coverage
+/.idea
+/.mypy_cache
+/.pytest_cache
+/.tox
+/build
+/dist
+/htmlcov
+/venv*
