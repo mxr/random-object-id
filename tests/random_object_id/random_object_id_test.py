@@ -1,51 +1,29 @@
-import contextlib
 import re
-import sys
 
-import mock
-import six
+import pytest
 
-from random_object_id.random_object_id import \
-    gen_random_object_id, parse_args, main
+from random_object_id import generate
+from random_object_id import main
 
 
-@contextlib.contextmanager
-def captured_output():
-    old_out = sys.stdout
-    try:
-        sys.stdout = six.StringIO()
-        yield sys.stdout
-    finally:
-        sys.stdout = old_out
+def test_generate(mocker):
+    mocker.patch("time.time", return_value=1429506585.786924)
+
+    object_id = generate()
+
+    assert object_id.startswith("55348a19")
+    assert re.match("^[0-9a-f]{24}$", generate())
 
 
-def test_gen_random_object_id():
-    assert re.match('[0-9a-f]{24}', gen_random_object_id())
+@pytest.mark.parametrize(
+    ("args", "expected"),
+    (
+        pytest.param((), "^[0-9a-f]{24}\n$", id="default"),
+        pytest.param(("-l",), r'^ObjectId\("[0-9a-f]{24}"\)\n$', id="long form"),
+    ),
+)
+def test_main(capsys, args, expected):
+    assert not main(args)
 
-
-def test_gen_random_object_id_time():
-    with mock.patch('time.time') as mock_time:
-        mock_time.return_value = 1429506585.786924
-        object_id = gen_random_object_id()
-
-    assert re.match('55348a19', object_id)
-
-
-def test_parse_args():
-    assert parse_args(['-l']).long_form
-
-
-def test_main():
-    with mock.patch('sys.argv', ['random_object_id']):
-        with captured_output() as output:
-            main()
-
-    assert re.match('[0-9a-f]{24}\n', output.getvalue())
-
-
-def test_main_l():
-    with mock.patch('sys.argv', ['random_object_id', '-l']):
-        with captured_output() as output:
-            main()
-
-    assert re.match('ObjectId\("[0-9a-f]{24}"\)\n', output.getvalue())
+    out, _ = capsys.readouterr()
+    assert re.match(expected, out), out
