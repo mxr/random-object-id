@@ -1,5 +1,4 @@
 covdefaults
 coverage
-pre-commit
 pytest
 pytest-mock
