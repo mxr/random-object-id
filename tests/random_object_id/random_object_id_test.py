@@ -12,7 +12,7 @@ def test_generate(mocker):
     object_id = generate()
 
     assert object_id.startswith("55348a19")
-    assert re.match("^[0-9a-f]{24}$", generate())
+    assert re.match("^[0-9a-f]{24}$", object_id)
 
 
 @pytest.mark.parametrize(
