@@ -7,9 +7,9 @@ from typing import Sequence
 
 
 def generate() -> str:
-    timestamp = "{:x}".format(int(time.time()))
+    timestamp = int(time.time())
     rest = binascii.b2a_hex(os.urandom(8)).decode("ascii")
-    return timestamp + rest
+    return f"{timestamp:x}{rest}"
 
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
