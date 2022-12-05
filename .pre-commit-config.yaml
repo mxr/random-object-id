@@ -41,7 +41,7 @@ repos:
     rev: 22.10.0
     hooks:
     -   id: black
--   repo: https://github.com/asottile/blacken-docs
+-   repo: https://github.com/adamchainz/blacken-docs
     rev: v1.12.1
     hooks:
     -   id: blacken-docs
