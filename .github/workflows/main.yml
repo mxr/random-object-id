@@ -9,7 +9,7 @@ jobs:
   main:
     strategy:
       matrix:
-        python-version: [3.x, pypy3]
+        python-version: [3.x, pypy3.x]
         os: [windows-latest, ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
