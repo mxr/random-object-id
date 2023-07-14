@@ -7,18 +7,12 @@ on:
 
 jobs:
   main:
-    strategy:
-      matrix:
-        python-version: [3.x, pypy3.7, pypy3.8, pypy3.9]
-        os: [windows-latest, ubuntu-latest]
-
-    runs-on: ${{ matrix.os }}
-    steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: install tox
-      run: python -m pip install --upgrade tox virtualenv setuptools pip
-    - name: run tox
-      run: tox -e py
+    uses: asottile/workflows/.github/workflows/tox.yml@v1.5.0
+    with:
+      env: '["py38", "py39", "py310", "py311", "py312", "py313", "pypy3"]'
+  main-win:
+    uses: asottile/workflows/.github/workflows/tox.yml@v1.5.0
+    with:
+      env: '["py38"]'
+      os: windows-latest
+      arch: '["x64", "x86"]'
