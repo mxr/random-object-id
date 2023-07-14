@@ -1,8 +1,9 @@
+from __future__ import annotations
+
 import binascii
 import os
 import time
 from argparse import ArgumentParser
-from typing import Optional
 from typing import Sequence
 
 
@@ -12,7 +13,7 @@ def generate() -> str:
     return f"{timestamp:x}{rest}"
 
 
-def main(argv: Optional[Sequence[str]] = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     parser = ArgumentParser(description="Generate a random MongoDB ObjectId")
     parser.add_argument(
         "-l",
