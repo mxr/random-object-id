@@ -1,6 +1,7 @@
 # Random ObjectId
 
 [![Wheel Status](https://img.shields.io/pypi/wheel/random-object-id.svg?maxAge=2592000)](https://pypi.python.org/pypi/random-object-id/)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/mxr/random-object-id/main.svg)](https://results.pre-commit.ci/latest/github/mxr/random-object-id/main)
 
 ## Motivation
 
