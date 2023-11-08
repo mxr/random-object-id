@@ -19,10 +19,6 @@ repos:
     hooks:
     -   id: reorder-python-imports
         args: [--py38-plus, --add-import, 'from __future__ import annotations']
--   repo: https://github.com/hakancelikdev/unimport
-    rev: 1.0.0
-    hooks:
-    -   id: unimport
 -   repo: https://github.com/mxr/unkey
     rev: v0.0.1
     hooks:
@@ -31,9 +27,9 @@ repos:
     rev: v0.1.4
     hooks:
     -   id: ruff
-        args: ['--fix', '--target-version=py312']
+        args: ['--fix', '--target-version=py38']
     -   id: ruff-format
-        args: ['--target-version=py312']
+        args: ['--target-version=py38']
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.6.1
     hooks:
