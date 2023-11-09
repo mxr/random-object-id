@@ -17,7 +17,7 @@ None
 
 ## Supports
 
-py36+. See GitHub workflow [here][GitHub workflow].
+py38+. See GitHub workflow [here][GitHub workflow].
 
 ## Installation
 
