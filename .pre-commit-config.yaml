@@ -1,36 +1,41 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
-    hooks:
-    -   id: check-docstring-first
-    -   id: check-yaml
-    -   id: debug-statements
-    -   id: end-of-file-fixer
-    -   id: name-tests-test
-    -   id: requirements-txt-fixer
-    -   id: trailing-whitespace
--   repo: https://github.com/asottile/setup-cfg-fmt
-    rev: v2.5.0
-    hooks:
-    -   id: setup-cfg-fmt
-        args: ['--min-py-version', '3.8']
--   repo: https://github.com/asottile/reorder-python-imports
-    rev: v3.12.0
-    hooks:
-    -   id: reorder-python-imports
-        args: [--py38-plus, --add-import, 'from __future__ import annotations']
--   repo: https://github.com/mxr/unkey
-    rev: v0.0.1
-    hooks:
-    -   id: unkey
--   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.5
-    hooks:
-    -   id: ruff
-        args: ['--fix', '--target-version=py38']
-    -   id: ruff-format
-        args: ['--target-version=py38']
--   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.7.0
-    hooks:
-    -   id: mypy
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.5.0
+  hooks:
+  - id: check-docstring-first
+  - id: debug-statements
+  - id: end-of-file-fixer
+  - id: name-tests-test
+  - id: requirements-txt-fixer
+  - id: trailing-whitespace
+- repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+  rev: v2.11.0
+  hooks:
+  - id: pretty-format-toml
+    args: [--autofix]
+  - id: pretty-format-yaml
+    args: [--autofix]
+- repo: https://github.com/asottile/setup-cfg-fmt
+  rev: v2.5.0
+  hooks:
+  - id: setup-cfg-fmt
+    args: [--min-py-version, '3.8']
+- repo: https://github.com/asottile/reorder-python-imports
+  rev: v3.12.0
+  hooks:
+  - id: reorder-python-imports
+    args: [--py38-plus, --add-import, from __future__ import annotations]
+- repo: https://github.com/mxr/unkey
+  rev: v0.0.1
+  hooks:
+  - id: unkey
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.1.5
+  hooks:
+  - id: ruff
+    args: [--fix]
+  - id: ruff-format
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v1.7.0
+  hooks:
+  - id: mypy
