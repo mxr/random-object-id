@@ -26,16 +26,16 @@ repos:
   - id: reorder-python-imports
     args: [--py38-plus, --add-import, from __future__ import annotations]
 - repo: https://github.com/mxr/unkey
-  rev: v0.0.1
+  rev: v0.0.2
   hooks:
   - id: unkey
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.7.0
+  rev: v0.7.1
   hooks:
   - id: ruff
     args: [--fix]
   - id: ruff-format
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v1.12.1
+  rev: v1.13.0
   hooks:
   - id: mypy
