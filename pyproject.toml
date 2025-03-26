@@ -20,5 +20,5 @@ extend-select = [
   "A",  # see flake8-builtins
   "C4",  # see flake8-comprehension
   "SIM",  # see flake8-simplify
-  "TC"  # see flake8-type-checking
+  "TC",  # see flake8-type-checking
 ]
