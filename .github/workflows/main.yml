@@ -7,12 +7,12 @@ on:
 
 jobs:
   main:
-    uses: asottile/workflows/.github/workflows/tox.yml@v1.6.0
+    uses: asottile/workflows/.github/workflows/tox.yml@v1.8.1
     with:
-      env: '["py38", "py39", "py310", "py311", "py312", "py313", "pypy3"]'
+      env: '["py39", "py310", "py311", "py312", "py313", "py314", "pypy7.3.13"]' # https://github.com/actions/runner-images/blob/50ae10289a1d019551858f6a174f78d2e212bed4/images/ubuntu/Ubuntu2204-Readme.md#pypy
   main-win:
-    uses: asottile/workflows/.github/workflows/tox.yml@v1.6.0
+    uses: asottile/workflows/.github/workflows/tox.yml@v1.8.1
     with:
-      env: '["py38"]'
+      env: '["py39"]'
       os: windows-latest
       arch: '["x64", "x86"]'

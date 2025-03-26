@@ -4,7 +4,10 @@ import binascii
 import os
 import time
 from argparse import ArgumentParser
-from typing import Sequence
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from collections.abc import Sequence
 
 
 def generate() -> str:
