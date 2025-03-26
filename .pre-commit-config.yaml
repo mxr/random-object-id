@@ -19,12 +19,12 @@ repos:
   rev: v2.7.0
   hooks:
   - id: setup-cfg-fmt
-    args: [--min-py-version, '3.8']
+    args: [--min-py-version, '3.9']
 - repo: https://github.com/asottile/reorder-python-imports
   rev: v3.14.0
   hooks:
   - id: reorder-python-imports
-    args: [--py38-plus, --add-import, from __future__ import annotations]
+    args: [--py39-plus, --add-import, from __future__ import annotations]
 - repo: https://github.com/mxr/unkey
   rev: v0.0.2
   hooks:
